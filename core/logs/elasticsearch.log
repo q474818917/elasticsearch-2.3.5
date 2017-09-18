@@ -1,0 +1,29 @@
+[2017-09-18 17:36:12,776][INFO ][node                     ] [Anti-Cap] version[2.3.5-SNAPSHOT], pid[15235], build[NA/NA]
+[2017-09-18 17:36:12,776][INFO ][node                     ] [Anti-Cap] initializing ...
+[2017-09-18 17:36:13,323][INFO ][plugins                  ] [Anti-Cap] modules [], plugins [], sites []
+[2017-09-18 17:36:13,359][INFO ][env                      ] [Anti-Cap] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [178.8gb], net total_space [232.6gb], spins? [unknown], types [hfs]
+[2017-09-18 17:36:13,359][INFO ][env                      ] [Anti-Cap] heap size [3.5gb], compressed ordinary object pointers [true]
+[2017-09-18 17:36:13,360][WARN ][env                      ] [Anti-Cap] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2017-09-18 17:36:15,904][INFO ][node                     ] [Anti-Cap] initialized
+[2017-09-18 17:36:15,904][INFO ][node                     ] [Anti-Cap] starting ...
+[2017-09-18 17:36:16,018][INFO ][transport                ] [Anti-Cap] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2017-09-18 17:36:16,024][INFO ][discovery                ] [Anti-Cap] elasticsearch/DDMLiqjvSuS5vBNQD4dwZw
+[2017-09-18 17:36:19,072][INFO ][cluster.service          ] [Anti-Cap] new_master {Anti-Cap}{DDMLiqjvSuS5vBNQD4dwZw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2017-09-18 17:36:19,095][INFO ][http                     ] [Anti-Cap] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2017-09-18 17:36:19,095][INFO ][node                     ] [Anti-Cap] started
+[2017-09-18 17:36:19,117][INFO ][gateway                  ] [Anti-Cap] recovered [0] indices into cluster_state
+[2017-09-18 18:12:38,995][INFO ][node                     ] [Anti-Cap] stopping ...
+[2017-09-18 18:14:52,890][INFO ][node                     ] [Psyklop] version[2.3.5-SNAPSHOT], pid[15688], build[NA/NA]
+[2017-09-18 18:14:52,891][INFO ][node                     ] [Psyklop] initializing ...
+[2017-09-18 18:14:53,320][INFO ][plugins                  ] [Psyklop] modules [], plugins [], sites []
+[2017-09-18 18:14:53,366][INFO ][env                      ] [Psyklop] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [178.8gb], net total_space [232.6gb], spins? [unknown], types [hfs]
+[2017-09-18 18:14:53,366][INFO ][env                      ] [Psyklop] heap size [3.5gb], compressed ordinary object pointers [true]
+[2017-09-18 18:14:53,367][WARN ][env                      ] [Psyklop] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2017-09-18 18:14:55,595][INFO ][node                     ] [Psyklop] initialized
+[2017-09-18 18:14:55,595][INFO ][node                     ] [Psyklop] starting ...
+[2017-09-18 18:14:55,684][INFO ][transport                ] [Psyklop] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2017-09-18 18:14:55,690][INFO ][discovery                ] [Psyklop] elasticsearch/rJSR1MmaRFqeoaSxcUpiyQ
+[2017-09-18 18:14:58,739][INFO ][cluster.service          ] [Psyklop] new_master {Psyklop}{rJSR1MmaRFqeoaSxcUpiyQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2017-09-18 18:14:58,765][INFO ][http                     ] [Psyklop] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2017-09-18 18:14:58,765][INFO ][node                     ] [Psyklop] started
+[2017-09-18 18:14:58,784][INFO ][gateway                  ] [Psyklop] recovered [0] indices into cluster_state
