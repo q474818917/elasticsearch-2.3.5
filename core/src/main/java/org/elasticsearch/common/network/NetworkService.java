@@ -63,6 +63,7 @@ public class NetworkService extends AbstractComponent {
     }
 
     /**
+     * 自定义名称解析器可以支持自定义查找键（my_net_key：ipv4），还可以更改默认的inet地址，以防未提供设置。
      * A custom name resolver can support custom lookup keys (my_net_key:ipv4) and also change
      * the default inet address used in case no settings is provided.
      */
@@ -94,6 +95,7 @@ public class NetworkService extends AbstractComponent {
     }
 
     /**
+     * 解析bindHosts为互联网地址列表
      * Resolves {@code bindHosts} to a list of internet addresses. The list will
      * not contain duplicate addresses.
      * @param bindHosts list of hosts to bind to. this may contain special pseudo-hostnames
@@ -136,6 +138,7 @@ public class NetworkService extends AbstractComponent {
     }
 
     /**
+     * 解析publishHosts为单个发布地址。
      * Resolves {@code publishHosts} to a single publish address. The fact that it returns
      * only one address is just a current limitation.
      * <p>

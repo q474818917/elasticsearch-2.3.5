@@ -30,6 +30,8 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkState;
 
 /**
+ * 简单地扩展这个类，实现configure()并调用镜像那些被发现的方法的继承方法 Binder
+ *
  * A support class for {@link Module}s which reduces repetition and results in
  * a more readable configuration. Simply extend this class, implement {@link
  * #configure()}, and call the inherited methods which mirror those found in

@@ -27,6 +27,7 @@ import org.elasticsearch.common.component.AbstractComponent;
 import org.elasticsearch.common.settings.Settings;
 
 /**
+ * 在每个节点上，允许动态集群或者索引范围内，shard 分配决定
  * {@link AllocationDecider} is an abstract base class that allows to make
  * dynamic cluster- or index-wide shard allocation decisions on a per-node
  * basis.

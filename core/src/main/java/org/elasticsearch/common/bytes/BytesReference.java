@@ -28,6 +28,7 @@ import java.nio.channels.GatheringByteChannel;
 
 /**
  * A reference to bytes.
+ * 对字节的引用。
  */
 public interface BytesReference {
 

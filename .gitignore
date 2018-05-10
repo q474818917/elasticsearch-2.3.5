@@ -39,4 +39,5 @@ html_docs
 /tmp/
 backwards/
 
-
+core/data/
+core/logs/

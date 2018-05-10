@@ -115,7 +115,9 @@ import java.util.concurrent.TimeUnit;
 import static org.elasticsearch.common.settings.Settings.settingsBuilder;
 
 /**
- * 集群中一个节点。
+ * 节点表示集群内的节点（cluster.name）。该client()可以使用一个用来Client抵靠群集执行动作/操作。
+ * 为了创建节点，NodeBuilder可以使用。完成后，一定要call close()给它。
+ *
  * A node represent a node within a cluster (<tt>cluster.name</tt>). The {@link #client()} can be used
  * in order to use a {@link Client} to perform actions/operations against the cluster.
  * <p>In order to create a node, the {@link NodeBuilder} can be used. When done with it, make sure to
@@ -171,28 +173,29 @@ public class Node implements Releasable {
         final ThreadPool threadPool = new ThreadPool(settings);
         NamedWriteableRegistry namedWriteableRegistry = new NamedWriteableRegistry();
 
+        /* elasticsearch.yml 配置参数就是注入Module中的各个Service，比如HierarchyCircuitBreakerService、NetworkService*/
         boolean success = false;
         try {
             ModulesBuilder modules = new ModulesBuilder();
             modules.add(new Version.Module(version));
-            modules.add(new CircuitBreakerModule(settings));
+            modules.add(new CircuitBreakerModule(settings));                    //断路器
             // plugin modules must be added here, before others or we can get crazy injection errors...
             for (Module pluginModule : pluginsService.nodeModules()) {
                 modules.add(pluginModule);
             }
-            modules.add(new PluginsModule(pluginsService));
+            modules.add(new PluginsModule(pluginsService));                     //插件
             modules.add(new SettingsModule(this.settings));
             modules.add(new NodeModule(this));
-            modules.add(new NetworkModule(namedWriteableRegistry));
+            modules.add(new NetworkModule(namedWriteableRegistry));             //解析network.host
             modules.add(new ScriptModule(this.settings));
             modules.add(new EnvironmentModule(environment));
             modules.add(new NodeEnvironmentModule(nodeEnvironment));
             modules.add(new ClusterNameModule(this.settings));
-            modules.add(new ThreadPoolModule(threadPool));
-            modules.add(new DiscoveryModule(this.settings));
+            modules.add(new ThreadPoolModule(threadPool));                      //
+            modules.add(new DiscoveryModule(this.settings));                    //
             modules.add(new ClusterModule(this.settings));
             modules.add(new RestModule(this.settings));
-            modules.add(new TransportModule(settings, namedWriteableRegistry));
+            modules.add(new TransportModule(settings, namedWriteableRegistry)); //
             if (settings.getAsBoolean(HTTP_ENABLED, true)) {
                 modules.add(new HttpServerModule(settings));
             }
@@ -200,7 +203,7 @@ public class Node implements Releasable {
             modules.add(new SearchModule());
             modules.add(new ActionModule(false));
             modules.add(new MonitorModule(settings));
-            modules.add(new GatewayModule(settings));
+            modules.add(new GatewayModule(settings));                           //
             modules.add(new NodeClientModule());
             modules.add(new ShapeModule());
             modules.add(new PercolatorModule());
@@ -211,6 +214,7 @@ public class Node implements Releasable {
 
             pluginsService.processModules(modules);
 
+            //先通过module注入，然后创建统一的injector，最后获取实例通过injector.getInstance
             injector = modules.createInjector();
 
             client = injector.getInstance(Client.class);

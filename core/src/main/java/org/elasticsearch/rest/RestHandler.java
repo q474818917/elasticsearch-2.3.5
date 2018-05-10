@@ -20,6 +20,7 @@
 package org.elasticsearch.rest;
 
 /**
+ * rest下的action包中，都要实现该接口
  * Handler for REST requests
  */
 public interface RestHandler {

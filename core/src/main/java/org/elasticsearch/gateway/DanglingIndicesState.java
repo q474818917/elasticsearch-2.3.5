@@ -34,6 +34,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
+ * 查找索引状态已写入磁盘，但不存在集群中的元数据
  * The dangling indices state is responsible for finding new dangling indices (indices that have
  * their state written on disk, but don't exists in the metadata of the cluster), and importing
  * them into the cluster.

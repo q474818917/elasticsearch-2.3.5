@@ -224,7 +224,7 @@ final class Bootstrap {
         // Set the system property before anything has a chance to trigger its use
         System.setProperty("es.logger.prefix", "");
 
-        BootstrapCLIParser bootstrapCLIParser = new BootstrapCLIParser();
+        BootstrapCLIParser bootstrapCLIParser = new BootstrapCLIParser();   //启动命令行命令解析
         CliTool.ExitStatus status = bootstrapCLIParser.execute(args);
 
         if (CliTool.ExitStatus.OK != status) {

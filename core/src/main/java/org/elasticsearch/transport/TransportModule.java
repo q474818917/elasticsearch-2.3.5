@@ -33,7 +33,8 @@ import org.elasticsearch.transport.netty.NettyTransport;
 import java.util.Map;
 
 /**
- *
+ * LocalTransport 、NettyTransport
+ * NettyTransport使用NetworkService
  */
 public class TransportModule extends AbstractModule {
 

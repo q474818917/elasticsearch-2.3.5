@@ -1,29 +1,133 @@
-[2017-09-18 17:36:12,776][INFO ][node                     ] [Anti-Cap] version[2.3.5-SNAPSHOT], pid[15235], build[NA/NA]
-[2017-09-18 17:36:12,776][INFO ][node                     ] [Anti-Cap] initializing ...
-[2017-09-18 17:36:13,323][INFO ][plugins                  ] [Anti-Cap] modules [], plugins [], sites []
-[2017-09-18 17:36:13,359][INFO ][env                      ] [Anti-Cap] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [178.8gb], net total_space [232.6gb], spins? [unknown], types [hfs]
-[2017-09-18 17:36:13,359][INFO ][env                      ] [Anti-Cap] heap size [3.5gb], compressed ordinary object pointers [true]
-[2017-09-18 17:36:13,360][WARN ][env                      ] [Anti-Cap] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
-[2017-09-18 17:36:15,904][INFO ][node                     ] [Anti-Cap] initialized
-[2017-09-18 17:36:15,904][INFO ][node                     ] [Anti-Cap] starting ...
-[2017-09-18 17:36:16,018][INFO ][transport                ] [Anti-Cap] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
-[2017-09-18 17:36:16,024][INFO ][discovery                ] [Anti-Cap] elasticsearch/DDMLiqjvSuS5vBNQD4dwZw
-[2017-09-18 17:36:19,072][INFO ][cluster.service          ] [Anti-Cap] new_master {Anti-Cap}{DDMLiqjvSuS5vBNQD4dwZw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
-[2017-09-18 17:36:19,095][INFO ][http                     ] [Anti-Cap] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
-[2017-09-18 17:36:19,095][INFO ][node                     ] [Anti-Cap] started
-[2017-09-18 17:36:19,117][INFO ][gateway                  ] [Anti-Cap] recovered [0] indices into cluster_state
-[2017-09-18 18:12:38,995][INFO ][node                     ] [Anti-Cap] stopping ...
-[2017-09-18 18:14:52,890][INFO ][node                     ] [Psyklop] version[2.3.5-SNAPSHOT], pid[15688], build[NA/NA]
-[2017-09-18 18:14:52,891][INFO ][node                     ] [Psyklop] initializing ...
-[2017-09-18 18:14:53,320][INFO ][plugins                  ] [Psyklop] modules [], plugins [], sites []
-[2017-09-18 18:14:53,366][INFO ][env                      ] [Psyklop] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [178.8gb], net total_space [232.6gb], spins? [unknown], types [hfs]
-[2017-09-18 18:14:53,366][INFO ][env                      ] [Psyklop] heap size [3.5gb], compressed ordinary object pointers [true]
-[2017-09-18 18:14:53,367][WARN ][env                      ] [Psyklop] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
-[2017-09-18 18:14:55,595][INFO ][node                     ] [Psyklop] initialized
-[2017-09-18 18:14:55,595][INFO ][node                     ] [Psyklop] starting ...
-[2017-09-18 18:14:55,684][INFO ][transport                ] [Psyklop] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
-[2017-09-18 18:14:55,690][INFO ][discovery                ] [Psyklop] elasticsearch/rJSR1MmaRFqeoaSxcUpiyQ
-[2017-09-18 18:14:58,739][INFO ][cluster.service          ] [Psyklop] new_master {Psyklop}{rJSR1MmaRFqeoaSxcUpiyQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
-[2017-09-18 18:14:58,765][INFO ][http                     ] [Psyklop] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
-[2017-09-18 18:14:58,765][INFO ][node                     ] [Psyklop] started
-[2017-09-18 18:14:58,784][INFO ][gateway                  ] [Psyklop] recovered [0] indices into cluster_state
+[2018-05-10 14:31:53,927][INFO ][node                     ] [James Rhodes] version[2.3.5-SNAPSHOT], pid[2923], build[NA/NA]
+[2018-05-10 14:31:53,928][INFO ][node                     ] [James Rhodes] initializing ...
+[2018-05-10 14:31:54,383][INFO ][plugins                  ] [James Rhodes] modules [], plugins [], sites []
+[2018-05-10 14:31:54,419][INFO ][env                      ] [James Rhodes] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [139.9gb], net total_space [232.6gb], spins? [unknown], types [hfs]
+[2018-05-10 14:31:54,419][INFO ][env                      ] [James Rhodes] heap size [3.5gb], compressed ordinary object pointers [true]
+[2018-05-10 14:31:54,420][WARN ][env                      ] [James Rhodes] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2018-05-10 14:31:57,457][INFO ][node                     ] [James Rhodes] initialized
+[2018-05-10 14:31:57,457][INFO ][node                     ] [James Rhodes] starting ...
+[2018-05-10 14:32:03,699][INFO ][node                     ] [James Rhodes] stopping ...
+[2018-05-10 14:32:03,704][INFO ][transport                ] [James Rhodes] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2018-05-10 14:32:03,704][INFO ][node                     ] [James Rhodes] stopped
+[2018-05-10 14:32:03,704][INFO ][node                     ] [James Rhodes] closing ...
+[2018-05-10 14:32:03,708][ERROR][bootstrap                ] [James Rhodes] Exception
+java.lang.IllegalStateException: Can't move to started state when closed
+	at org.elasticsearch.common.component.Lifecycle.moveToStarted(Lifecycle.java:130)
+	at org.elasticsearch.common.component.AbstractLifecycleComponent.start(AbstractLifecycleComponent.java:69)
+	at org.elasticsearch.node.Node.start(Node.java:284)
+	at org.elasticsearch.bootstrap.Bootstrap.start(Bootstrap.java:207)
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:273)
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:36)
+[2018-05-10 14:32:03,722][INFO ][node                     ] [James Rhodes] closed
+[2018-05-10 14:33:17,490][INFO ][node                     ] [Turner D. Century] version[2.3.5-SNAPSHOT], pid[2938], build[NA/NA]
+[2018-05-10 14:33:17,490][INFO ][node                     ] [Turner D. Century] initializing ...
+[2018-05-10 14:33:17,952][INFO ][plugins                  ] [Turner D. Century] modules [], plugins [], sites []
+[2018-05-10 14:33:17,983][INFO ][env                      ] [Turner D. Century] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [139.9gb], net total_space [232.6gb], spins? [unknown], types [hfs]
+[2018-05-10 14:33:17,984][INFO ][env                      ] [Turner D. Century] heap size [3.5gb], compressed ordinary object pointers [true]
+[2018-05-10 14:33:17,984][WARN ][env                      ] [Turner D. Century] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2018-05-10 14:33:19,939][INFO ][node                     ] [Turner D. Century] initialized
+[2018-05-10 14:33:19,939][INFO ][node                     ] [Turner D. Century] starting ...
+[2018-05-10 14:33:22,702][INFO ][node                     ] [Turner D. Century] stopping ...
+[2018-05-10 14:33:22,705][INFO ][node                     ] [Turner D. Century] stopped
+[2018-05-10 14:33:22,705][INFO ][node                     ] [Turner D. Century] closing ...
+[2018-05-10 14:33:22,711][INFO ][node                     ] [Turner D. Century] closed
+[2018-05-10 14:36:15,835][INFO ][node                     ] [Carolyn Parmenter] version[2.3.5-SNAPSHOT], pid[2963], build[NA/NA]
+[2018-05-10 14:36:15,835][INFO ][node                     ] [Carolyn Parmenter] initializing ...
+[2018-05-10 14:36:16,292][INFO ][plugins                  ] [Carolyn Parmenter] modules [], plugins [], sites []
+[2018-05-10 14:36:16,319][INFO ][env                      ] [Carolyn Parmenter] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [139.9gb], net total_space [232.6gb], spins? [unknown], types [hfs]
+[2018-05-10 14:36:16,320][INFO ][env                      ] [Carolyn Parmenter] heap size [3.5gb], compressed ordinary object pointers [true]
+[2018-05-10 14:36:16,320][WARN ][env                      ] [Carolyn Parmenter] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2018-05-10 14:36:18,188][INFO ][node                     ] [Carolyn Parmenter] initialized
+[2018-05-10 14:36:18,188][INFO ][node                     ] [Carolyn Parmenter] starting ...
+[2018-05-10 14:36:18,278][INFO ][transport                ] [Carolyn Parmenter] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2018-05-10 14:36:18,284][INFO ][discovery                ] [Carolyn Parmenter] elasticsearch/ZO0F8VQESoCawx1A2BCbUA
+[2018-05-10 14:36:21,329][INFO ][cluster.service          ] [Carolyn Parmenter] new_master {Carolyn Parmenter}{ZO0F8VQESoCawx1A2BCbUA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-05-10 14:36:24,196][INFO ][http                     ] [Carolyn Parmenter] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2018-05-10 14:36:24,196][INFO ][node                     ] [Carolyn Parmenter] started
+[2018-05-10 14:36:24,226][INFO ][node                     ] [Carolyn Parmenter] stopping ...
+[2018-05-10 14:36:24,239][INFO ][gateway                  ] [Carolyn Parmenter] recovered [1] indices into cluster_state
+[2018-05-10 14:36:24,248][INFO ][node                     ] [Carolyn Parmenter] stopped
+[2018-05-10 14:36:24,249][INFO ][node                     ] [Carolyn Parmenter] closing ...
+[2018-05-10 14:36:24,249][WARN ][gateway                  ] [Carolyn Parmenter] [index][2]: failed to list shard for shard_started on node [ZO0F8VQESoCawx1A2BCbUA]
+FailedNodeException[Failed node [ZO0F8VQESoCawx1A2BCbUA]]; nested: TransportException[transport stopped, action: internal:gateway/local/started_shards[n]];
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.onFailure(TransportNodesAction.java:204)
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.access$800(TransportNodesAction.java:106)
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction$2.handleException(TransportNodesAction.java:177)
+	at org.elasticsearch.transport.TransportService$2.run(TransportService.java:206)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: TransportException[transport stopped, action: internal:gateway/local/started_shards[n]]
+	... 4 more
+[2018-05-10 14:36:24,249][WARN ][gateway                  ] [Carolyn Parmenter] [index][4]: failed to list shard for shard_started on node [ZO0F8VQESoCawx1A2BCbUA]
+FailedNodeException[Failed node [ZO0F8VQESoCawx1A2BCbUA]]; nested: TransportException[transport stopped, action: internal:gateway/local/started_shards[n]];
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.onFailure(TransportNodesAction.java:204)
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.access$800(TransportNodesAction.java:106)
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction$2.handleException(TransportNodesAction.java:177)
+	at org.elasticsearch.transport.TransportService$2.run(TransportService.java:206)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: TransportException[transport stopped, action: internal:gateway/local/started_shards[n]]
+	... 4 more
+[2018-05-10 14:36:24,249][WARN ][gateway                  ] [Carolyn Parmenter] [index][0]: failed to list shard for shard_started on node [ZO0F8VQESoCawx1A2BCbUA]
+FailedNodeException[Failed node [ZO0F8VQESoCawx1A2BCbUA]]; nested: TransportException[transport stopped, action: internal:gateway/local/started_shards[n]];
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.onFailure(TransportNodesAction.java:204)
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.access$800(TransportNodesAction.java:106)
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction$2.handleException(TransportNodesAction.java:177)
+	at org.elasticsearch.transport.TransportService$2.run(TransportService.java:206)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: TransportException[transport stopped, action: internal:gateway/local/started_shards[n]]
+	... 4 more
+[2018-05-10 14:36:24,249][WARN ][gateway                  ] [Carolyn Parmenter] [index][1]: failed to list shard for shard_started on node [ZO0F8VQESoCawx1A2BCbUA]
+FailedNodeException[Failed node [ZO0F8VQESoCawx1A2BCbUA]]; nested: TransportException[transport stopped, action: internal:gateway/local/started_shards[n]];
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.onFailure(TransportNodesAction.java:204)
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.access$800(TransportNodesAction.java:106)
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction$2.handleException(TransportNodesAction.java:177)
+	at org.elasticsearch.transport.TransportService$2.run(TransportService.java:206)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: TransportException[transport stopped, action: internal:gateway/local/started_shards[n]]
+	... 4 more
+[2018-05-10 14:36:24,249][WARN ][gateway                  ] [Carolyn Parmenter] [index][3]: failed to list shard for shard_started on node [ZO0F8VQESoCawx1A2BCbUA]
+FailedNodeException[Failed node [ZO0F8VQESoCawx1A2BCbUA]]; nested: TransportException[transport stopped, action: internal:gateway/local/started_shards[n]];
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.onFailure(TransportNodesAction.java:204)
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.access$800(TransportNodesAction.java:106)
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction$2.handleException(TransportNodesAction.java:177)
+	at org.elasticsearch.transport.TransportService$2.run(TransportService.java:206)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: TransportException[transport stopped, action: internal:gateway/local/started_shards[n]]
+	... 4 more
+[2018-05-10 14:36:24,321][WARN ][transport                ] [Carolyn Parmenter] Transport response handler not found of id [14]
+[2018-05-10 14:36:24,321][WARN ][transport                ] [Carolyn Parmenter] Transport response handler not found of id [13]
+[2018-05-10 14:36:24,321][WARN ][transport                ] [Carolyn Parmenter] Transport response handler not found of id [12]
+[2018-05-10 14:36:24,321][WARN ][transport                ] [Carolyn Parmenter] Transport response handler not found of id [11]
+[2018-05-10 14:36:24,321][WARN ][transport                ] [Carolyn Parmenter] Transport response handler not found of id [10]
+[2018-05-10 14:36:24,323][INFO ][node                     ] [Carolyn Parmenter] closed
+[2018-05-10 15:07:29,156][INFO ][node                     ] [Gazer] version[2.3.5-SNAPSHOT], pid[3246], build[NA/NA]
+[2018-05-10 15:07:29,156][INFO ][node                     ] [Gazer] initializing ...
+[2018-05-10 15:07:29,632][INFO ][plugins                  ] [Gazer] modules [], plugins [], sites []
+[2018-05-10 15:07:29,659][INFO ][env                      ] [Gazer] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [139.9gb], net total_space [232.6gb], spins? [unknown], types [hfs]
+[2018-05-10 15:07:29,659][INFO ][env                      ] [Gazer] heap size [3.5gb], compressed ordinary object pointers [true]
+[2018-05-10 15:07:29,660][WARN ][env                      ] [Gazer] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2018-05-10 15:07:31,543][INFO ][node                     ] [Gazer] initialized
+[2018-05-10 15:07:31,544][INFO ][node                     ] [Gazer] starting ...
+[2018-05-10 15:25:25,502][INFO ][node                     ] [Gazer] stopping ...
+[2018-05-10 15:25:25,504][INFO ][node                     ] [Gazer] stopped
+[2018-05-10 15:25:25,504][INFO ][node                     ] [Gazer] closing ...
+[2018-05-10 15:25:25,508][ERROR][bootstrap                ] [Gazer] Exception
+java.lang.IllegalStateException: Can't move to started state when closed
+	at org.elasticsearch.common.component.Lifecycle.moveToStarted(Lifecycle.java:130)
+	at org.elasticsearch.common.component.AbstractLifecycleComponent.start(AbstractLifecycleComponent.java:69)
+	at org.elasticsearch.transport.TransportService.doStart(TransportService.java:182)
+	at org.elasticsearch.common.component.AbstractLifecycleComponent.start(AbstractLifecycleComponent.java:68)
+	at org.elasticsearch.node.Node.start(Node.java:283)
+	at org.elasticsearch.bootstrap.Bootstrap.start(Bootstrap.java:207)
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:273)
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:36)
+[2018-05-10 15:25:25,509][INFO ][node                     ] [Gazer] closed

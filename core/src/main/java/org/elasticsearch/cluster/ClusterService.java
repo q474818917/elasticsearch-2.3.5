@@ -31,6 +31,7 @@ import org.elasticsearch.tasks.TaskManager;
 import java.util.List;
 
 /**
+ * 注册cluster state events, 提交state变更任务
  * The cluster service allowing to both register for cluster state events ({@link ClusterStateListener})
  * and submit state update tasks ({@link ClusterStateUpdateTask}.
  */

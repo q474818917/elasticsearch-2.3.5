@@ -54,7 +54,9 @@ public abstract class AbstractComponent {
     }
 
     /**
+     * 检查已弃用的设置并记录正确的备选项
      * Checks for a deprecated setting and logs the correct alternative
+     *
      */
     protected void logDeprecatedSetting(String settingName, String alternativeName) {
         if (!Strings.isNullOrEmpty(settings.get(settingName))) {
@@ -63,6 +65,7 @@ public abstract class AbstractComponent {
     }
 
     /**
+     * 检查已删除的设置并记录正确的备选项
      * Checks for a removed setting and logs the correct alternative
      */
     protected void logRemovedSetting(String settingName, String alternativeName) {

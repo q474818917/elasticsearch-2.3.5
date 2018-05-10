@@ -29,6 +29,7 @@ import org.elasticsearch.common.settings.Settings;
 import java.util.Set;
 
 /**
+ * 将多个AllocationDecider实现的“决策” 组合为单个分配决策的组合
  * A composite {@link AllocationDecider} combining the "decision" of multiple
  * {@link AllocationDecider} implementations into a single allocation decision.
  */

@@ -26,7 +26,7 @@ import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- *
+ * ES的Executors，和jdk的 {@link Executors} 对比
  */
 public class EsExecutors {
 

@@ -23,6 +23,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 一个针对Writeable.Reader读者的注册表NamedWriteable。注册由类别类别NamedWriteable和该类别唯一的名称组合而成。
+ * Map<Class<?>, NamedWritable>
  * Registry for {@link NamedWriteable} objects. Allows to register and retrieve prototype instances of writeable objects
  * given their name.
  */
@@ -31,6 +33,7 @@ public class NamedWriteableRegistry {
     private final Map<Class<?>, InnerRegistry<?>> registry = new HashMap<>();
 
     /**
+     * 注册
      * Registers a {@link NamedWriteable} prototype given its category
      */
     public synchronized <T> void registerPrototype(Class<T> categoryClass, NamedWriteable<? extends T> namedWriteable) {
@@ -44,6 +47,7 @@ public class NamedWriteableRegistry {
     }
 
     /**
+     * 根据Key获取NamedWriteable
      * Returns a prototype of the {@link NamedWriteable} object identified by the name provided as argument and its category
      */
     public synchronized <T> NamedWriteable<? extends T> getPrototype(Class<T> categoryClass, String name) {

@@ -120,6 +120,7 @@ import org.elasticsearch.action.admin.indices.warmer.put.PutWarmerResponse;
 import org.elasticsearch.common.Nullable;
 
 /**
+ * 索引管理操作接口
  * Administrative actions/operations against indices.
  *
  * @see AdminClient#indices()

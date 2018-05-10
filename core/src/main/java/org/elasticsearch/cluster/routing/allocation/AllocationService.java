@@ -44,6 +44,8 @@ import java.util.List;
 
 
 /**
+ * 管理集群节点分配， AllocationDeciders 在shard分配时选择节点
+ * 管理节点加入集群，重新分配shard
  * This service manages the node allocation of a cluster. For this reason the
  * {@link AllocationService} keeps {@link AllocationDeciders} to choose nodes
  * for shard allocation. This class also manages new nodes joining the cluster

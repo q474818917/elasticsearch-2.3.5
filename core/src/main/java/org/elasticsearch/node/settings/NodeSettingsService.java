@@ -31,6 +31,7 @@ import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
+ * 允许node改变setting ，该setting来自集群的新的setting事件
  * A service that allows to register for node settings change that can come from cluster
  * events holding new settings.
  */
@@ -39,6 +40,7 @@ public class NodeSettingsService extends AbstractComponent implements ClusterSta
     private static volatile Settings globalSettings = Settings.Builder.EMPTY_SETTINGS;
 
     /**
+     * 返回节点上次更新的全局（静态）设置。请注意，如果您在同一个JVM上有多个节点，它将只返回最新的一个集合...
      * Returns the global (static) settings last updated by a node. Note, if you have multiple
      * nodes on the same JVM, it will just return the latest one set...
      */

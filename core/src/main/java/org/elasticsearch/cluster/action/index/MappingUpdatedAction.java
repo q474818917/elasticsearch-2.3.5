@@ -35,6 +35,7 @@ import org.elasticsearch.node.settings.NodeSettingsService;
 import java.util.concurrent.TimeoutException;
 
 /**
+ * 当映射被动态更新并且需要在群集状态元数据中更新（并广播给所有成员）时，由群集中的分片调用。
  * Called by shards in the cluster when their mapping was dynamically updated and it needs to be updated
  * in the cluster state meta data (and broadcast to all members).
  */

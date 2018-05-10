@@ -36,6 +36,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
+ * 一种故障检测功能，可以定期对master进行故障检测，看其是否存在
  * A fault detection that pings the master periodically to see if its alive.
  */
 public class MasterFaultDetection extends FaultDetection {

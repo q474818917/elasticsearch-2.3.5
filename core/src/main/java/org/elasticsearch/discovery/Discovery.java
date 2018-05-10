@@ -27,6 +27,7 @@ import org.elasticsearch.common.component.LifecycleComponent;
 import org.elasticsearch.node.service.NodeService;
 
 /**
+ * 可插拔模块，允许实现其他节点的发现，向所有节点发布群集状态，选择引发群集状态更改事件的群集主节点。
  * A pluggable module allowing to implement discovery of other nodes, publishing of the cluster
  * state to all nodes, electing a master of the cluster that raises cluster state change
  * events.
@@ -53,6 +54,7 @@ public interface Discovery extends LifecycleComponent<Discovery> {
     void setRoutingService(RoutingService routingService);
 
     /**
+     * 向集群发布来自master的所有change（只能由master called）
      * Publish all the changes to the cluster from the master (can be called just by the master). The publish
      * process should not publish this state to the master as well! (the master is sending it...).
      *

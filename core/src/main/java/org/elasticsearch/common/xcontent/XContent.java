@@ -25,6 +25,7 @@ import java.io.*;
 
 /**
  * A generic abstraction on top of handling content, inspired by JSON and pull parsing.
+ * 处理内容之上的一个通用抽象，受JSON的启发和解析。
  */
 public interface XContent {
 

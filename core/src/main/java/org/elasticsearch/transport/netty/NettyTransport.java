@@ -334,6 +334,10 @@ public class NettyTransport extends AbstractLifecycleComponent<Transport> implem
         return ImmutableMap.copyOf(profileBoundAddresses);
     }
 
+    /**
+     * 创建clientBootstrap
+     * @return
+     */
     private ClientBootstrap createClientBootstrap() {
 
         if (blockingClient) {
@@ -554,6 +558,11 @@ public class NettyTransport extends AbstractLifecycleComponent<Transport> implem
         return publishPort;
     }
 
+    /**
+     * 创建serverBootstrap
+     * @param name
+     * @param settings
+     */
     private void createServerBootstrap(String name, Settings settings) {
         boolean blockingServer = settings.getAsBoolean("transport.tcp.blocking_server", this.settings.getAsBoolean(TCP_BLOCKING_SERVER, this.settings.getAsBoolean(TCP_BLOCKING, false)));
         String port = settings.get("port");
@@ -893,6 +902,11 @@ public class NettyTransport extends AbstractLifecycleComponent<Transport> implem
         connectToNode(node, false);
     }
 
+    /**
+     * 待transport启动后，连接其他node
+     * @param node
+     * @param light
+     */
     public void connectToNode(DiscoveryNode node, boolean light) {
         if (!lifecycle.started()) {
             throw new IllegalStateException("can't add nodes to a stopped transport");

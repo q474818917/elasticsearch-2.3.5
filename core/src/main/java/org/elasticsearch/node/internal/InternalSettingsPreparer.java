@@ -70,6 +70,8 @@ public class InternalSettingsPreparer {
      * and then replacing all property placeholders. If a {@link Terminal} is provided and configuration settings are loaded,
      * settings with a value of <code>${prompt.text}</code> or <code>${prompt.secret}</code> will result in a prompt for
      * the setting to the user.
+     * 通过收集所有elasticsearch系统属性来准备设置，可选地加载配置设置，然后替换所有的属性占位符。
+     * 如果Terminal提供了a 并且加载了配置设置，则值为${prompt.text}或${prompt.secret}的设置将导致提示用户进行设置。
      * @param input The custom settings to use. These are not overwritten by settings in the configuration file.
      * @param terminal the Terminal to use for input/output
      * @return the {@link Settings} and {@link Environment} as a {@link Tuple}

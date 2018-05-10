@@ -17,6 +17,12 @@
 package org.elasticsearch.common.inject;
 
 /**
+ *
+ * 一个模块提供配置信息，通常是接口绑定，将用于创建一个Injector。基于Guice的应用程序最终只由一组 Modules和一些引导代码组成。
+    你的Module类可以通过扩展AbstractModule而不是直接实现这个接口来使用更简化的语法 。
+
+    除了通过配置的绑定之外configure(org.elasticsearch.common.inject.Binder)，还将为使用@注释的所有方法创建绑定Provides。在这些方法上使用范围和绑定注释来配置绑定。
+
  * A module contributes configuration information, typically interface
  * bindings, which will be used to create an {@link Injector}. A Guice-based
  * application is ultimately composed of little more than a set of
@@ -33,6 +39,8 @@ package org.elasticsearch.common.inject;
 public interface Module {
 
     /**
+     * 为该模块贡献绑定和其他配置binder。
+        不要直接调用此方法来安装子模块。而是使用 Binder.install(Module)，确保provider methods被发现
      * Contributes bindings and other configurations for this module to {@code binder}.
      * <p>
      * <strong>Do not invoke this method directly</strong> to install submodules. Instead use

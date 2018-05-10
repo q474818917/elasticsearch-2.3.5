@@ -47,8 +47,8 @@ public class GatewayModule extends AbstractModule {
 
     @Override
     protected void configure() {
-        bind(MetaStateService.class).asEagerSingleton();
-        bind(DanglingIndicesState.class).asEagerSingleton();
+        bind(MetaStateService.class).asEagerSingleton();                                    //读写metaData
+        bind(DanglingIndicesState.class).asEagerSingleton();                                //
         bind(GatewayService.class).asEagerSingleton();
         gatewayTypes.bindType(binder(), settings, GATEWAY_TYPE_KEY, "default");
         bind(TransportNodesListGatewayMetaState.class).asEagerSingleton();

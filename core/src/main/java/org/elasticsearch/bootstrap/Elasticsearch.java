@@ -21,6 +21,7 @@ package org.elasticsearch.bootstrap;
 
 /**
  * This class starts elasticsearch.
+ * Elasticsearch -> Bootstrap -> Node ->
  */
 public final class Elasticsearch {
 

@@ -98,6 +98,7 @@ public class PluginsService extends AbstractComponent {
         List<Tuple<PluginInfo, Plugin>> pluginsLoaded = new ArrayList<>();
 
         // first we load plugins that are on the classpath. this is for tests and transport clients
+        // 加载classpath下的plugins
         for (Class<? extends Plugin> pluginClass : classpathPlugins) {
             Plugin plugin = loadPlugin(pluginClass, settings);
             PluginInfo pluginInfo = new PluginInfo(plugin.name(), plugin.description(), false, "NA", true, pluginClass.getName(), false);
@@ -109,6 +110,7 @@ public class PluginsService extends AbstractComponent {
         }
 
         // load modules
+        // 加载modules目录下的module, module内部服务使用
         if (modulesDirectory != null) {
             try {
                 List<Bundle> bundles = getModuleBundles(modulesDirectory);
@@ -123,6 +125,7 @@ public class PluginsService extends AbstractComponent {
         }
 
         // now, find all the ones that are in plugins/
+        // 加载plugins目录下的plugin，外部调用
         if (pluginsDirectory != null) {
             try {
                 List<Bundle> bundles = getPluginBundles(pluginsDirectory);
@@ -139,6 +142,7 @@ public class PluginsService extends AbstractComponent {
         plugins = Collections.unmodifiableList(pluginsLoaded);
 
         // We need to build a List of jvm and site plugins for checking mandatory plugins
+        // 检查强依赖插件
         Map<String, Plugin> jvmPlugins = new HashMap<>();
         List<String> sitePlugins = new ArrayList<>();
 

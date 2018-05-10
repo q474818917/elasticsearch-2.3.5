@@ -24,7 +24,8 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- *
+ * Module -> AbstractModule
+ * ModulesBuilder 迭代器添加的都是继承AbstractModule，实现configure()
  */
 public class ModulesBuilder implements Iterable<Module> {
 
