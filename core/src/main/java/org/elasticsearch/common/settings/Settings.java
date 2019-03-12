@@ -397,6 +397,7 @@ public final class Settings implements ToXContent {
     }
 
     /**
+     * 如果获取不到该属性值，则使用默认的值
      * Returns the setting value (as boolean) associated with the setting key. If it does not exists,
      * returns the default value provided.
      */

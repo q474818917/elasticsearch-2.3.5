@@ -100,7 +100,7 @@ public class TransportModule extends AbstractModule {
             logger.info("Using [{}] as transport, overridden by [{}]", configuredTransport.getName(), configuredTransportSource);
             bind(Transport.class).to(configuredTransport).asEagerSingleton();
         } else {
-            String defaultType = DiscoveryNode.localNode(settings) ? LOCAL_TRANSPORT : NETTY_TRANSPORT;
+            String defaultType = DiscoveryNode.localNode(settings) ? LOCAL_TRANSPORT : NETTY_TRANSPORT; //默认是nettyTransport
             String typeName = settings.get(TRANSPORT_TYPE_KEY, defaultType);
             Class<? extends Transport> clazz = transports.get(typeName);
             if (clazz == null) {

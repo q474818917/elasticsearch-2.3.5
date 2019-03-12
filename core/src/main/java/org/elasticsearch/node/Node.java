@@ -173,7 +173,9 @@ public class Node implements Releasable {
         final ThreadPool threadPool = new ThreadPool(settings);
         NamedWriteableRegistry namedWriteableRegistry = new NamedWriteableRegistry();
 
-        /* elasticsearch.yml 配置参数就是注入Module中的各个Service，比如HierarchyCircuitBreakerService、NetworkService*/
+        /* elasticsearch.yml 配置参数就是注入Module中的各个Service，比如HierarchyCircuitBreakerService、NetworkService
+            类似spring @Autowired private NetworkService networkService
+        * */
         boolean success = false;
         try {
             ModulesBuilder modules = new ModulesBuilder();
@@ -215,8 +217,10 @@ public class Node implements Releasable {
             pluginsService.processModules(modules);
 
             //先通过module注入，然后创建统一的injector，最后获取实例通过injector.getInstance
+            //所有@Inject都会执行，例如NodeClient和Headers都有@Inject，先inject Headers，然后将Headers实例放入到NodeClient中 @Inject
             injector = modules.createInjector();
 
+            //实例化一个Client，对应着前面的NodeClientModule，所以这里是NodeClient
             client = injector.getInstance(Client.class);
             threadPool.setNodeSettingsService(injector.getInstance(NodeSettingsService.class));
             success = true;
@@ -246,6 +250,8 @@ public class Node implements Releasable {
 
     /**
      * Start the node. If the node is already started, this method is no-op.
+     * GatewayService gatewayService = injector.getInstance(GatewayService); 获取实例
+     * gatewayService.start() 启动
      */
     public Node start() {
         if (!lifecycle.moveToStarted()) {
@@ -279,6 +285,7 @@ public class Node implements Releasable {
         injector.getInstance(GatewayService.class).start();
 
         // Start the transport service now so the publish address will be added to the local disco node in ClusterService
+        //启动transport发布ip添加到本地的discovery中
         TransportService transportService = injector.getInstance(TransportService.class);
         transportService.start();
         injector.getInstance(ClusterService.class).start();

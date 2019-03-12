@@ -93,7 +93,7 @@ public class DiscoveryModule extends AbstractModule {
 
     @Override
     protected void configure() {
-        String defaultType = DiscoveryNode.localNode(settings) ? "local" : "zen";
+        String defaultType = DiscoveryNode.localNode(settings) ? "local" : "zen";       //默认ZenDiscovery
         String discoveryType = settings.get(DISCOVERY_TYPE_KEY, defaultType);
         Class<? extends Discovery> discoveryClass = discoveryTypes.get(discoveryType);
         if (discoveryClass == null) {

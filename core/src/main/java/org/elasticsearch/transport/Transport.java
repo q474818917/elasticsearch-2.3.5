@@ -72,6 +72,7 @@ public interface Transport extends LifecycleComponent<Transport> {
     void connectToNode(DiscoveryNode node) throws ConnectTransportException;
 
     /**
+     * discover后连接其他node节点，以light方式
      * Connects to a node in a light manner. Used when just connecting for ping and then
      * disconnecting.
      */

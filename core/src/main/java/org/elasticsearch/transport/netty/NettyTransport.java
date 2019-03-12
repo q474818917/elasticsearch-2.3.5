@@ -125,6 +125,11 @@ import static org.elasticsearch.common.util.concurrent.ConcurrentCollections.new
 import static org.elasticsearch.common.util.concurrent.EsExecutors.daemonThreadFactory;
 
 /**
+ * 4种连接类型
+ * + low：recovery和batch(bulk)操作，大数据量操作
+ * + med：典型的搜索/单个文档索引
+ * + high：集群状态的发送
+ * + ping：node之间的ping操作
  * There are 4 types of connections per node, low/med/high/ping. Low if for batch oriented APIs (like recovery or
  * batch) with high payload that will cause regular request. (like search or single index) to take
  * longer. Med is for the typical search / single doc index. And High for things like cluster state. Ping is reserved for
@@ -165,6 +170,7 @@ public class NettyTransport extends AbstractLifecycleComponent<Transport> implem
     protected final ByteSizeValue receivePredictorMin;
     protected final ByteSizeValue receivePredictorMax;
 
+    /*连接数*/
     protected final int connectionsPerNodeRecovery;
     protected final int connectionsPerNodeBulk;
     protected final int connectionsPerNodeReg;

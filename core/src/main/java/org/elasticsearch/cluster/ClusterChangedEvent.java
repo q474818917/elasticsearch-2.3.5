@@ -30,6 +30,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * 本地节点接受的event，表示集群状态已经变更
  * An event received by the local node, signaling that the cluster state has changed.
  */
 public class ClusterChangedEvent {
