@@ -86,7 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import static org.elasticsearch.common.unit.TimeValue.timeValueSeconds;
 
 /**
- *
+ * 作用：发现节点及选举
  */
 public class ZenDiscovery extends AbstractLifecycleComponent<Discovery> implements Discovery, PingContextProvider {
 
@@ -113,8 +113,8 @@ public class ZenDiscovery extends AbstractLifecycleComponent<Discovery> implemen
     private final PublishClusterStateAction publishClusterState;
     private final MembershipAction membership;
 
-    private final TimeValue pingTimeout;
-    private final TimeValue joinTimeout;
+    private final TimeValue pingTimeout;            //选举master超时时间
+    private final TimeValue joinTimeout;            //加入master超时时间
 
     /** how many retry attempts to perform if join request failed with an retriable error */
     private final int joinRetryAttempts;
@@ -213,6 +213,12 @@ public class ZenDiscovery extends AbstractLifecycleComponent<Discovery> implemen
         this.routingService = routingService;
     }
 
+    /**
+     * 执行逻辑：
+     * joinThreadControl.start()
+     * joinThreadControl.innerJoinCluster()
+     *
+     */
     @Override
     protected void doStart() {
         nodesFD.setLocalNode(clusterService.localNode());
@@ -355,6 +361,7 @@ public class ZenDiscovery extends AbstractLifecycleComponent<Discovery> implemen
             return;
         }
 
+        //如果是masternode，则启动nodeFD
         if (clusterService.localNode().equals(masterNode)) {
             final int requiredJoins = Math.max(0, electMaster.minimumMasterNodes() - 1); // we count as one
             logger.debug("elected as master, waiting for incoming joins ([{}] needed)", requiredJoins);
@@ -379,6 +386,7 @@ public class ZenDiscovery extends AbstractLifecycleComponent<Discovery> implemen
 
             );
         } else {
+            //不是masternode，像masternode发送join request
             // process any incoming joins (they will fail because we are not the master)
             nodeJoinController.stopAccumulatingJoins("not master");
 
@@ -881,6 +889,7 @@ public class ZenDiscovery extends AbstractLifecycleComponent<Discovery> implemen
         }
     }
 
+    /*查找Master Node*/
     private DiscoveryNode findMaster() {
         logger.trace("starting to ping");
         ZenPing.PingResponse[] fullPingResponses = pingService.pingAndWait(pingTimeout);
@@ -902,7 +911,7 @@ public class ZenDiscovery extends AbstractLifecycleComponent<Discovery> implemen
 
         // filter responses
         List<ZenPing.PingResponse> pingResponses = new ArrayList<>();
-        for (ZenPing.PingResponse pingResponse : fullPingResponses) {
+        for (ZenPing.PingResponse pingResponse : fullPingResponses) {//fullPingResponses是ping后的node列表，接下来是过滤client node和data node
             DiscoveryNode node = pingResponse.node();
             if (masterElectionFilterClientNodes && (node.clientNode() || (!node.masterNode() && !node.dataNode()))) {
                 // filter out the client node, which is a client node, or also one that is not data and not master (effectively, client)
@@ -931,6 +940,7 @@ public class ZenDiscovery extends AbstractLifecycleComponent<Discovery> implemen
             if (pingResponse.master() != null) {
                 // We can't include the local node in pingMasters list, otherwise we may up electing ourselves without
                 // any check / verifications from other nodes in ZenDiscover#innerJoinCluster()
+                //本地node 不能包含在pingmasters列表中
                 if (!localNode.equals(pingResponse.master())) {
                     pingMasters.add(pingResponse.master());
                 }

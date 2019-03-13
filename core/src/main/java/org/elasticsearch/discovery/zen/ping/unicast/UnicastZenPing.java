@@ -340,10 +340,10 @@ public class UnicastZenPing extends AbstractLifecycleComponent<ZenPing> implemen
             nodesToPingSet.add(masterNode.value);
         }
 
-        // sort the nodes by likelihood of being an active master
+        // sort the nodes by likelihood of being an active master，根据成为master node的概率排序node
         List<DiscoveryNode> sortedNodesToPing = electMasterService.sortByMasterLikelihood(nodesToPingSet);
 
-        // new add the the unicast targets first
+        // new add the the unicast targets first，将配置文件中unicast.hosts，合并到sortedNodesToPing，成为新的nodesToPing
         List<DiscoveryNode> nodesToPing = CollectionUtils.arrayAsArrayList(configuredTargetNodes);
         nodesToPing.addAll(sortedNodesToPing);
 
@@ -359,6 +359,7 @@ public class UnicastZenPing extends AbstractLifecycleComponent<ZenPing> implemen
                 nodeFoundByAddress = false;
             }
 
+            //连接已断开，先建立连接，后ping request
             if (!transportService.nodeConnected(nodeToSend)) {
                 if (sendPingsHandler.isClosed()) {
                     return;

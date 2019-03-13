@@ -125,6 +125,7 @@ public class ElectMasterService extends AbstractComponent {
     }
 
     /**
+     * 从可能的node中选举出master
      * Elects a new master out of the possible nodes, returning it. Returns <tt>null</tt>
      * if no master has been elected.
      */
@@ -143,6 +144,7 @@ public class ElectMasterService extends AbstractComponent {
         }
     }
 
+    //比较DiscoveryNode中nodeId，排第一个选举为master
     private List<DiscoveryNode> sortedMasterNodes(Iterable<DiscoveryNode> nodes) {
         List<DiscoveryNode> possibleNodes = CollectionUtils.iterableAsArrayList(nodes);
         if (possibleNodes.isEmpty()) {

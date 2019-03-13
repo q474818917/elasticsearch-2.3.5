@@ -68,7 +68,7 @@
 # discovery.zen.ping.unicast.hosts: ["host1", "host2"]
 #
 # Prevent the "split brain" by configuring the majority of nodes (total number of nodes / 2 + 1):
-#
+# 下面这个参数，通过配置大多数节点防止脑裂
 # discovery.zen.minimum_master_nodes: 3
 #
 # For more information, see the documentation at:
