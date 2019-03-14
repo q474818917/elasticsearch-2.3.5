@@ -1,19 +1,12 @@
-[2019-03-13 14:38:13,537][INFO ][node                     ] [Goldeneye] version[2.3.5-SNAPSHOT], pid[67385], build[bf8bab0/2019-03-12T06:43:13Z]
-[2019-03-13 14:38:13,540][INFO ][node                     ] [Goldeneye] initializing ...
-[2019-03-13 14:38:13,987][INFO ][plugins                  ] [Goldeneye] modules [], plugins [], sites []
-[2019-03-13 14:38:14,024][INFO ][env                      ] [Goldeneye] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [61.7gb], net total_space [232.6gb], spins? [unknown], types [hfs]
-[2019-03-13 14:38:14,025][INFO ][env                      ] [Goldeneye] heap size [3.5gb], compressed ordinary object pointers [true]
-[2019-03-13 14:38:14,025][WARN ][env                      ] [Goldeneye] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
-[2019-03-13 14:38:21,756][INFO ][node                     ] [Goldeneye] initialized
-[2019-03-13 14:38:21,757][INFO ][node                     ] [Goldeneye] starting ...
-[2019-03-13 14:38:21,872][INFO ][transport                ] [Goldeneye] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
-[2019-03-13 14:38:21,880][INFO ][discovery                ] [Goldeneye] elasticsearch/NO1PDykwRJaNCKgU4X0AMA
-[2019-03-13 14:38:37,745][INFO ][cluster.service          ] [Goldeneye] new_master {Goldeneye}{NO1PDykwRJaNCKgU4X0AMA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
-[2019-03-13 14:38:37,804][INFO ][http                     ] [Goldeneye] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
-[2019-03-13 14:38:37,804][INFO ][node                     ] [Goldeneye] started
-[2019-03-13 14:38:37,851][INFO ][gateway                  ] [Goldeneye] recovered [1] indices into cluster_state
-[2019-03-13 14:38:38,507][INFO ][cluster.routing.allocation] [Goldeneye] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[index][1]] ...]).
-[2019-03-13 14:38:44,671][INFO ][node                     ] [Goldeneye] stopping ...
-[2019-03-13 14:38:44,712][INFO ][node                     ] [Goldeneye] stopped
-[2019-03-13 14:38:44,713][INFO ][node                     ] [Goldeneye] closing ...
-[2019-03-13 14:38:44,716][INFO ][node                     ] [Goldeneye] closed
+[2019-03-14 16:33:50,120][INFO ][node                     ] [Nefarius] version[2.3.5-SNAPSHOT], pid[10260], build[92625f8/2019-03-14T02:37:37Z]
+[2019-03-14 16:33:50,121][INFO ][node                     ] [Nefarius] initializing ...
+[2019-03-14 16:33:50,548][INFO ][plugins                  ] [Nefarius] modules [], plugins [], sites []
+[2019-03-14 16:33:50,584][INFO ][env                      ] [Nefarius] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [60.1gb], net total_space [232.6gb], spins? [unknown], types [hfs]
+[2019-03-14 16:33:50,584][INFO ][env                      ] [Nefarius] heap size [3.5gb], compressed ordinary object pointers [true]
+[2019-03-14 16:33:50,585][WARN ][env                      ] [Nefarius] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2019-03-14 16:33:53,312][INFO ][node                     ] [Nefarius] initialized
+[2019-03-14 16:33:53,312][INFO ][node                     ] [Nefarius] starting ...
+[2019-03-14 16:39:07,938][INFO ][node                     ] [Nefarius] stopping ...
+[2019-03-14 16:39:07,940][INFO ][node                     ] [Nefarius] stopped
+[2019-03-14 16:39:07,940][INFO ][node                     ] [Nefarius] closing ...
+[2019-03-14 16:39:07,944][INFO ][node                     ] [Nefarius] closed

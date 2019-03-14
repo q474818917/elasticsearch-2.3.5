@@ -16,8 +16,13 @@ import org.apache.lucene.analysis.standard.StandardTokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.OffsetAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
+import org.elasticsearch.common.io.FastStringReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class LuceneTokenizerDemo {
+
+    private static Logger logger = LoggerFactory.getLogger(LuceneTokenizerDemo.class);
 
     public static void main(String[] args) {
         List<Integer> list = new ArrayList<>();
@@ -30,7 +35,7 @@ public class LuceneTokenizerDemo {
         boolean ret = list.removeAll(list1);    //从list中移除与list1相同的元素
         Iterator<Integer> it = list.iterator();   //创建迭代器
         while (it.hasNext()) {       //循环遍历迭代器
-            System.out.println(it.next());    //输出集合中元素
+            logger.info("集合中的元素", it.next());    //输出集合中元素
         }
 
 
@@ -43,7 +48,7 @@ public class LuceneTokenizerDemo {
     public void testST(){
         Tokenizer tokenizer = new StandardTokenizer();
 
-        tokenizer.setReader(new StringReader("这一个中文分词的例子，你可以直接运行它！IKAnalyer can analysis english text too"));
+        tokenizer.setReader(new FastStringReader("这一个中文分词的例子，你可以直接运行它！IKAnalyer can analysis english text too"));
 
         TokenStreamComponents tsc = new TokenStreamComponents(tokenizer);
         TokenStream ts = tsc.getTokenStream();
@@ -53,7 +58,7 @@ public class LuceneTokenizerDemo {
         try {
             ts.reset();
             while(ts.incrementToken()){
-                System.out.println(term.toString() + "->" + offset.startOffset() + "-" + offset.endOffset() + "->" + type.type());
+                logger.info("term值:{}, offset开始值:{}", term.toString(), offset.startOffset());
             }
             ts.end();
         } catch (IOException e) {
@@ -67,7 +72,7 @@ public class LuceneTokenizerDemo {
     public void testCT(){
         Tokenizer tokenizer = new ClassicTokenizer();
 
-        tokenizer.setReader(new StringReader("这一个中文分词的例子，你可以直接运行它！IKAnalyer can analysis english text too"));
+        tokenizer.setReader(new FastStringReader("这一个中文分词的例子，你可以直接运行它！IKAnalyer can analysis english text too"));
 
         TokenStreamComponents tsc = new TokenStreamComponents(tokenizer);
         TokenStream ts = tsc.getTokenStream();
@@ -77,7 +82,7 @@ public class LuceneTokenizerDemo {
         try {
             ts.reset();
             while(ts.incrementToken()){
-                System.out.println(term.toString() + "->" + offset.startOffset() + "-" + offset.endOffset() + "->" + type.type());
+                logger.info("term值:{}, offset开始值:{}", term.toString(), offset.startOffset());
             }
             ts.end();
         } catch (IOException e) {
@@ -91,7 +96,7 @@ public class LuceneTokenizerDemo {
      */
     public void testNT(){
         Tokenizer tokenizer = new NGramTokenizer();
-        tokenizer.setReader(new StringReader("这一个中文分词的例子，你可以直接运行它！IKAnalyer can analysis english text too"));
+        tokenizer.setReader(new FastStringReader("这一个中文分词的例子，你可以直接运行它！IKAnalyer can analysis english text too"));
 
         TokenStreamComponents tsc = new TokenStreamComponents(tokenizer);
         TokenStream ts = tsc.getTokenStream();
@@ -101,7 +106,7 @@ public class LuceneTokenizerDemo {
         try {
             ts.reset();
             while(ts.incrementToken()){
-                System.out.println(term.toString() + "->" + offset.startOffset() + "-" + offset.endOffset() + "->" + type.type());
+                logger.info("term值:{}, offset开始值:{}", term.toString(), offset.startOffset());
             }
             ts.end();
         } catch (IOException e) {
