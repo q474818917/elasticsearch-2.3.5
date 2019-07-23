@@ -27,7 +27,7 @@ jar hell:产生的原因是jar包冲突，UserJvmOptionsService->ant-javafx.jar,
 + 启动各个Service，Service的状态在Lifecycle存储，状态由INITIALIZED -> STARTED
 
 ## elasticsearch 索引流程
-
++ 
 
 ## elasticsearch 架构图
 ![image](https://note.youdao.com/yws/public/resource/11b88babe53bdada374c4355f425bf31/xmlnote/WEBRESOURCEa8ced9d265e6e3ccebc28bd349a53c05/7294)

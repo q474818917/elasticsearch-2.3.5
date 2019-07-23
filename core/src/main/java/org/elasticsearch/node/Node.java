@@ -196,7 +196,7 @@ public class Node implements Releasable {
             modules.add(new ThreadPoolModule(threadPool));                      //
             modules.add(new DiscoveryModule(this.settings));                    //
             modules.add(new ClusterModule(this.settings));
-            modules.add(new RestModule(this.settings));
+            modules.add(new RestModule(this.settings));                         //所有rest接口相关的类都是在rest包下的action子包去处理，注入类：RestActionModule
             modules.add(new TransportModule(settings, namedWriteableRegistry)); //
             if (settings.getAsBoolean(HTTP_ENABLED, true)) {
                 modules.add(new HttpServerModule(settings));

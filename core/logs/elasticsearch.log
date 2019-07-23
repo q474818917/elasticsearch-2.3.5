@@ -10,3 +10,28 @@
 [2019-03-14 16:39:07,940][INFO ][node                     ] [Nefarius] stopped
 [2019-03-14 16:39:07,940][INFO ][node                     ] [Nefarius] closing ...
 [2019-03-14 16:39:07,944][INFO ][node                     ] [Nefarius] closed
+[2019-03-14 17:26:34,395][INFO ][node                     ] [Candra] version[2.3.5-SNAPSHOT], pid[11748], build[92625f8/2019-03-14T02:37:37Z]
+[2019-03-14 17:26:34,396][INFO ][node                     ] [Candra] initializing ...
+[2019-03-14 17:26:34,816][INFO ][plugins                  ] [Candra] modules [], plugins [], sites []
+[2019-03-14 17:26:34,849][INFO ][env                      ] [Candra] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [60.1gb], net total_space [232.6gb], spins? [unknown], types [hfs]
+[2019-03-14 17:26:34,850][INFO ][env                      ] [Candra] heap size [3.5gb], compressed ordinary object pointers [true]
+[2019-03-14 17:26:34,850][WARN ][env                      ] [Candra] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2019-03-14 17:26:37,513][INFO ][node                     ] [Candra] initialized
+[2019-03-14 17:26:37,514][INFO ][node                     ] [Candra] starting ...
+[2019-03-14 17:26:37,631][INFO ][transport                ] [Candra] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2019-03-14 17:26:37,637][INFO ][discovery                ] [Candra] elasticsearch/9RKsbno0TpGWmSK0PuEorA
+[2019-03-14 17:26:42,190][INFO ][cluster.service          ] [Candra] new_master {Candra}{9RKsbno0TpGWmSK0PuEorA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2019-03-14 17:26:42,225][INFO ][http                     ] [Candra] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2019-03-14 17:26:42,225][INFO ][node                     ] [Candra] started
+[2019-03-14 17:26:42,276][INFO ][gateway                  ] [Candra] recovered [1] indices into cluster_state
+[2019-03-14 17:26:42,895][INFO ][cluster.routing.allocation] [Candra] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[index][2]] ...]).
+[2019-03-14 17:34:13,255][INFO ][node                     ] [Candra] stopping ...
+[2019-03-14 17:34:13,377][INFO ][node                     ] [Candra] stopped
+[2019-03-14 17:34:13,378][INFO ][node                     ] [Candra] closing ...
+[2019-03-14 17:34:13,381][INFO ][node                     ] [Candra] closed
+[2019-03-14 17:40:21,528][INFO ][node                     ] [Jennifer Walters] version[2.3.5-SNAPSHOT], pid[12145], build[92625f8/2019-03-14T02:37:37Z]
+[2019-03-14 17:40:21,529][INFO ][node                     ] [Jennifer Walters] initializing ...
+[2019-03-14 17:40:21,989][INFO ][plugins                  ] [Jennifer Walters] modules [], plugins [], sites []
+[2019-03-14 17:40:22,036][INFO ][env                      ] [Jennifer Walters] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [60gb], net total_space [232.6gb], spins? [unknown], types [hfs]
+[2019-03-14 17:40:22,036][INFO ][env                      ] [Jennifer Walters] heap size [3.5gb], compressed ordinary object pointers [true]
+[2019-03-14 17:40:22,037][WARN ][env                      ] [Jennifer Walters] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
