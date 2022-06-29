@@ -514,7 +514,7 @@
     <dependency>
       <groupId>org.apache.pdfbox</groupId>
       <artifactId>pdfbox</artifactId>
-      <version>1.8.10</version>
+      <version>1.8.16</version>
       <scope>compile</scope>
       <exclusions>
         <exclusion>
